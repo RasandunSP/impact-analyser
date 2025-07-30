@@ -82,7 +82,11 @@ export const defaultConfig: AppConfig = {
         name: 'Gemini Pro',
         provider: 'gemini',
         model: 'gemini-pro',
+<<<<<<< HEAD
         apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY,
+=======
+        apiKey: '',
+>>>>>>> 06d3b87813ab6084c5e584e4f8362eb3c003ef11
         maxTokens: 4000,
         temperature: 0.3,
         timeout: 30000,
@@ -93,7 +97,11 @@ export const defaultConfig: AppConfig = {
         name: 'Gemini Pro Vision',
         provider: 'gemini',
         model: 'gemini-pro-vision',
+<<<<<<< HEAD
         apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY,
+=======
+        apiKey: '',
+>>>>>>> 06d3b87813ab6084c5e584e4f8362eb3c003ef11
         maxTokens: 4000,
         temperature: 0.3,
         timeout: 30000,
