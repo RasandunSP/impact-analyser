@@ -168,7 +168,13 @@ export default function Home() {
   const handleTestGeminiAPI = async () => {
     try {
       console.log("Testing Gemini API directly...");
-      const apiKey = 'AIzaSyCnzUdhk42ef61PC9tL2o_kKGDyb8DVfn8';
+      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.GEMINI_API_KEY;
+      
+      if (!apiKey) {
+        alert("Gemini API key not found in environment variables. Please check your .env.local file.");
+        return;
+      }
+      
       const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
       
       console.log("Making test request to:", url);

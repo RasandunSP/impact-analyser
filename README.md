@@ -90,12 +90,41 @@ npm run dev
 ```
 
 ### Environment Configuration
-Create a `.env.local` file in the root directory:
-```env
-# AI Model API Keys (optional for development)
-OPENAI_API_KEY=your_openai_api_key
-# Gemini API key is configured in the application
+
+#### 1. Create Environment File
+Copy the example environment file and configure your API keys:
+
+```bash
+# Copy the example environment file
+cp .env.example .env.local
+
+# Edit the file with your actual API keys
+nano .env.local  # or use your preferred editor
 ```
+
+#### 2. Configure API Keys
+Edit `.env.local` and add your API keys:
+
+```env
+# OpenAI API Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Google Gemini API Configuration  
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+
+# Application Configuration
+NEXT_PUBLIC_APP_NAME=Impact Analyzer
+NEXT_PUBLIC_APP_VERSION=1.0.0
+
+# Development Configuration
+NODE_ENV=development
+```
+
+#### 3. API Key Setup
+- **OpenAI**: Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+- **Gemini**: Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+> **Note**: The `.env.local` file is automatically ignored by Git for security. Never commit API keys to version control.
 
 ## ⚙️ Configuration
 
